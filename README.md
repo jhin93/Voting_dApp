@@ -11,6 +11,25 @@ Smart Contract Project #1
  - hardhat, ethers 라이브러리 익숙해지기
 
 
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+    We suggest that you begin by typing:
+
+    cd ballot-dapp
+    npm start
+
+
 4/25 ~ 5/1
 
 논의 -> 디벨롭
