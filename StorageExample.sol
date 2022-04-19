@@ -1,13 +1,8 @@
-별거 없다.
-
-그냥 리믹스에서 간단한 컨트랙트 작성하고 끝.
-
-======== 코드 내용 ==========
 
 //A simple Smart Contract
 
 //SPDX-License-Identifier:GPL-3.0
-pragma solidity ^0.5.2; //>=0.4.16 <0.9.0;
+pragma solidity ^0.8.4; //>=0.4.16 <0.9.0;
 
 contract StorageExample {
     uint storeData;
