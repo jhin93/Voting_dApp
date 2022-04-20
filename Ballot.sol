@@ -36,6 +36,30 @@ contract Ballot {
             }));
         }
     }
+
+
+    function giveRighttoVote (address voter) external {
+        require(
+            msg.sender == chairperson, // 투표권을 주는 건 의장만 가능
+            "Only Chairperson allowed to assign voting rights."
+        );
+
+        require(
+            !voters[voter].voted, // require를 사용해 투표를 이미 했는지 체크하는 것.
+            "Voter already voted once."
+        );
+        require(voters[voter].weight == 0);
+        // 위의 조건들을 다 충족하고 나면 투표권을 1개 준다.
+        voters[voter].weight = 1;
+    }
+    
+    // 위임을 스스로에게 할 수 없도록 하는 함수.
+    function delegate(address to) external {
+        Voter storage sender = voters[msg.sender];
+        require(!sender.voted, "You already voted once.");
+
+        require(to != msg.sender, "Self-delegation is not allowed");
+    }
 }
 
 
