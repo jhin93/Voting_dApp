@@ -1,0 +1,22 @@
+- 리믹스 설치
+npm i -g @remix-project/remixd
+
+에러 : 
+노드 버전이 너무 높아도 안될 수 있음 nvm use v10.13.0 로 바꾸고 할 것
+https://developpaper.com/question/npm-install-remix-ide-installation-error/
+
+
+
+- vscode ide 랑 리믹스 ide 를 연결하는 명령어
+remixd -s .
+
+리믹스 사이트에서 default workspace 말고도 localhost가 있는데,
+remixd를 설치한 로컬호스트는 로컬 디렉토리를 리믹스 사이트로 올리는 게 가능하다.
+
+
+
+
+
+
+
+
