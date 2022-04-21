@@ -88,7 +88,7 @@ contract Ballot {
         }
     }
 
-    function vote(uint proposal) external {
+    function vote(uint proposal) external { // 위의 delegate 함수와 동일
         Voter storage sender = voters[msg.sender];
         require(sender.weight != 0, "No right to vote");
         require(!sender.voted, "Already voted once.");
