@@ -59,6 +59,14 @@ contract Ballot {
         require(!sender.voted, "You already voted once.");
 
         require(to != msg.sender, "Self-delegation is not allowed");
+
+        while (voters[to].delegate != address(0)) {
+            to = voters[to].delegate;
+            require(to != msg.sender, "Found loop during Delegation");
+        }
+
+        sender.voted = true;
+        sender.delegate = to;
     }
 }
 
