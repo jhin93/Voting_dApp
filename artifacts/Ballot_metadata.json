@@ -32,6 +32,32 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "delegate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					}
+				],
+				"name": "giveRighttoVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -51,6 +77,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "proposal",
+						"type": "uint256"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -86,6 +125,32 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winnerName",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "winnerName_",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winningProposal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "winningProposal_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -116,11 +181,11 @@
 	},
 	"sources": {
 		"Ballot.sol": {
-			"keccak256": "0xe411cfdf2332b0b3636093b3bf4a96e49a4a7c204d2a0a3601ef634d62edc32b",
+			"keccak256": "0x16dbcb5c01cb2a697d3222356e5cbe57765146b598fe7edc75fe3c1e6d8026b2",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://dd39b9d20a17155cd89b1270739d27d23f6a4f88e7a465d96ac7b619877d65e6",
-				"dweb:/ipfs/QmTSVrPWacDetT3duVRWJZq1TQa3L1Uu35mhg57xvcb5wf"
+				"bzz-raw://de6e52e35f403c817a578103ec82b0b8a5c4acad9064a53303df7089f2890a32",
+				"dweb:/ipfs/QmVRGYQKtEoFCMDYzXQETshW8Kn2KyvHyWdgWd2aTkDRsQ"
 			]
 		}
 	},
