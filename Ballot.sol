@@ -71,18 +71,20 @@ contract Ballot {
         // 이 경우 위임(delegation)은 실행되지 않지만,
         // 다른 상황에서는 이러한 루프로 인해
         // 스마트 컨트랙트가 완전히 "고착"될 수 있습니다.
-        while (voters[to].delegate != address(0)) { // voters[to].delegate가 공백(address(0))이 아니라면, https://bbokkun.tistory.com/166
+        while (voters[to].delegate != address(0)) { // voters[to].delegate가 공백(address(0))이 아니라면... 이라는 조건문
+        // https://bbokkun.tistory.com/166
+        // https://stackoverflow.com/questions/48219716/what-is-address0-in-solidity
             to = voters[to].delegate;
-            require(to != msg.sender, "Found loop during Delegation");
+            require(to != msg.sender, "Found loop during Delegation"); // 우리는 delegation에 루프가 있음을 확인 했고 허용하지 않았습니다.
         }
 
-        sender.voted = true;
-        sender.delegate = to;
-        Voter storage delegate_ = voters[to];
-        if(delegate_.voted){
-            proposals[delegate_.vote].voteCount += sender.weight;
-        } else {
-            delegate_.weight += sender.weight;
+        sender.voted = true; // msg.sender.voted가 true로 된건데 위임을 했으니까 더 이상 투표권이 없다는 뜻.
+        sender.delegate = to; // msg.sender.delegeate에 인자(투표권을 준 주소)를 대입
+        Voter storage delegate_ = voters[to]; //delegate_라는 변수에 to 라는 주소의 Voter 구조체 할당.
+        if(delegate_.voted){// 대표가 이미 투표한 경우, 투표 수에 직접 추가 하십시오
+            proposals[delegate_.vote].voteCount += sender.weight; // proposals라는 구조체 배열의 인덱스(delegate_.vote)는 안건(Proposal 구조체)를 의미한다. 투표한 해당 안건의 voteCount에 sender.weight를 더한다.
+        } else { // 대표가 아직 투표하지 않았다면 weight에 추가하십시오.
+            delegate_.weight += sender.weight;   // 위임하는 사람(주소)의 투표권 수를 위임받는 사람(주소)의 투표권 수에 더한다.
         }
     }
 
@@ -96,18 +98,19 @@ contract Ballot {
         proposals[proposal].voteCount += sender.weight;
     }
 
+    // 모든 이전 득표를 고려하여 승리한 제안서를 계산합니다. 
     function winningProposal() public view returns (uint winningProposal_) {
         uint winningVoteCount = 0;
-        for(uint p = 0; p < proposals.length; p++) {
-            if(proposals[p].voteCount > winningVoteCount) {
-                winningVoteCount = proposals[p].voteCount;
-                winningProposal_ = p;
+        for(uint p = 0; p < proposals.length; p++) { // 안건 배열을 조회.
+            if(proposals[p].voteCount > winningVoteCount) { // 첫 안건부터 투표받은 수를 조회하여
+                winningVoteCount = proposals[p].voteCount; // 가장 많은 투표 수를 갱신하고
+                winningProposal_ = p; // 받은 안건도 계속 갱신한다.
             }
         }
     }
 
     function winnerName() external view returns (bytes32 winnerName_) {
-        winnerName_ = proposals[winningProposal()].name;
+        winnerName_ = proposals[winningProposal()].name; // 가장 많은 득표를 한 안건을 반환
     }
 
 }
