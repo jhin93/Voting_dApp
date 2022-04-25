@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getBytesNow1",
+				"outputs": [
+					{
+						"internalType": "bytes32[1]",
+						"name": "ba1",
+						"type": "bytes32[1]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBytesNow2",
+				"outputs": [
+					{
+						"internalType": "bytes32[1]",
+						"name": "ba2",
+						"type": "bytes32[1]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBytesNow3",
+				"outputs": [
+					{
+						"internalType": "bytes32[1]",
+						"name": "ba3",
+						"type": "bytes32[1]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"artifacts/getBytesDemo.sol": "getBytes"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"artifacts/getBytesDemo.sol": {
+			"keccak256": "0x243dd0abd57ee8636df7ddf475677b484dc9a955a25baa95ad5acc6e9a066e49",
+			"license": "MIT Liscense",
+			"urls": [
+				"bzz-raw://180b44458c3defca8268648aec5c45232430f2fbc4f8c16d46b41b3fef52ae50",
+				"dweb:/ipfs/QmXY7vUPcJ9cag7zFt4d2jzSLZVH1tbmCsmidW3tcBvrTV"
+			]
+		}
+	},
+	"version": 1
+}
