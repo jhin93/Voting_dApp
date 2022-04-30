@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT Liscense
 pragma solidity >=0.7.0 <0.9.0;
-//10:40초까지 시청
+// 6 22:17
 contract getBytes {
     function getBytesNow1() pure public returns (bytes32[1] memory ba1) 
     {
