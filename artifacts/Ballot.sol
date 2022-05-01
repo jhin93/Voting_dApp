@@ -56,6 +56,17 @@ contract Ballot {
         // 위의 조건들을 다 충족하고 나면 투표권을 1개 준다.
         voters[voter].weight = 1;
     }
+
+
+    function removeVotingRights(address voter) external {
+        require(msg.sender == chairperson, "Only Chairperson allowed to remove voting rights.");
+         // voters[voter].voted가 true 인 경우는 투표권리를 삭제 못하게 require문 작성. 만약 투표를 안해서 voters[voter].voted가 false면, !false는 true가 되서 require문 통과.
+        require(!voters[voter].voted, "Voter cannot be removed while vote is active");
+        require(voters[voter].weight == 1); // weight가 남아있어야함.
+        voters[voter].weight = 0; // 투표권 박탈.
+    }
+
+
     
     // `to` 로 유권자에게 투표를 위임하십시오.
     function delegate(address to) external {
