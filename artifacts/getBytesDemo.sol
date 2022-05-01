@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT Liscense
 pragma solidity >=0.7.0 <0.9.0;
-// 6 22:17
+//  위임을 전달받기 위해선 해당 계정은 투표권리를 받은 상태여야 한다.
+// 위임을 하면 위임받은 계정이 투표한 제안에 자동으로 투표된다.
 contract getBytes {
     function getBytesNow1() pure public returns (bytes32[1] memory ba1) 
     {

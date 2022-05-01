@@ -73,11 +73,11 @@
 	},
 	"sources": {
 		"artifacts/getBytesDemo.sol": {
-			"keccak256": "0x8917471b0dd324e55457138db2611b09add5b036cbb61e01982df04def96cd6c",
+			"keccak256": "0xab5cc7c6def819da62bb02baf9218542ad8775692103d16dd77076d8a167f94c",
 			"license": "MIT Liscense",
 			"urls": [
-				"bzz-raw://803e34f1590d684980ec8a00a90bfd8859289acd46d2ecf33089f922624e279b",
-				"dweb:/ipfs/Qmc4oA2QSYhk2gmxb42zRNU7B4QA5JKbFkqKX5nZgA37xU"
+				"bzz-raw://8e0985efe000deebc6c5f5fd904b17968eb0011006cf5dc1806b3034ea6ccdbd",
+				"dweb:/ipfs/QmP6aP7BbivSJjgNFDtXjXAALAY7TA3wCPpKbJotAmRwkw"
 			]
 		}
 	},
