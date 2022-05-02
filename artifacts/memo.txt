@@ -1,31 +1,35 @@
 - 로컬 <-> 리믹스 연결
-$ remixd -s .
+    $ remixd -s .
 
 
 - 리액트 앱 생성
-npx create-react-app 앱이름(대문자X)
+    $ npx create-react-app 앱이름(대문자X)
 
 
 - ethers, hardhat 설치
-npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
+    $ npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
 
 
 - 하드햇 설치 & 설정
-1. 설치 npx hardhat
-2. create a basic sample project
-3. npx create-react-app 하면서 생긴 gitignore를 삭제해야 함. 그래야 하드햇의 리드미가 생성됨.
+    1. 설치 
+        $ npx hardhat
+    2. create a basic sample project
+    3. npx create-react-app 하면서 생긴 gitignore를 삭제해야 함. 그래야 하드햇의 리드미가 생성됨.
 
 
-- 하드햇 실행
-npx hardhat compile
-결과 : 
+- 하드햇 컴파일 실행
+    $ npx hardhat compile
+    결과 : 
 
-✔ Help us improve Hardhat with anonymous crash reports & basic usage data? (Y/n) · true
-Downloading compiler 0.8.4
-Compiled 1 Solidity file successfully
+    ✔ Help us improve Hardhat with anonymous crash reports & basic usage data? (Y/n) · true
+    Downloading compiler 0.8.4
+    Compiled 1 Solidity file successfully
 
-디렉토리 & json 파일 생성. ballot_dapp/src/artifacts/contracts/Ballot.sol/Ballot.json
+    디렉토리 & json 파일 생성. ballot_dapp/src/artifacts/contracts/Ballot.sol/Ballot.json
 
 
+
+- 테스트용 주소와 프라이빗 키를 발현시키기 위해 hardhat node를 사용
+    $ npx hardhat node
 
 
