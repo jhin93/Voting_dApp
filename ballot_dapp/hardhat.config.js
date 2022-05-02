@@ -16,6 +16,14 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-module.exports = {
+module.exports = { // 메타마스크 이슈로 인해 module.exports를 수정
   solidity: "0.8.4",
+  paths:{
+    artifacts:'./src/artifacts'
+  },
+  networks:{
+    hardhat:{
+      chainID: 1337
+    }
+  }
 };
