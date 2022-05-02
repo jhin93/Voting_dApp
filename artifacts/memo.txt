@@ -63,3 +63,24 @@
         eth_getTransactionByHash
         eth_chainId
         eth_getTransactionReceipt
+
+
+- 노드의 첫번째 주소 & 프라이빗 키를 메타마스크에 import. 그래야 클라이언트와 상호작용 가능
+    
+    Account #0: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 (10000 ETH)
+    Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+
+    1. 메타마스크 네트워크를 Localhost 8545로 연결
+    2. 계정 가져오기
+    3. Account #0의 Private Key를 입력.
+
+
+
+
+
+
+
+
+
+
+
