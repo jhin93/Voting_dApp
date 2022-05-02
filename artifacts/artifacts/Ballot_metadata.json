@@ -82,6 +82,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					}
+				],
+				"name": "removeVotingRights",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "proposal",
 						"type": "uint256"
@@ -181,11 +194,11 @@
 	},
 	"sources": {
 		"artifacts/Ballot.sol": {
-			"keccak256": "0xbf31b1647dec62ab87967a894c6292e3510ede2d75d4e456353f01baba8fcb71",
+			"keccak256": "0xa2894cb33c6d3d3bfa23d7579c58bf68ca778ee8405cd25c398086faab49625a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://517fa2123ac78afe84576264ef8b87ea3a5e5ecfb6016c3d3e15379459ecaac0",
-				"dweb:/ipfs/QmSC32ZUWFkb61zLG7vCsD4mzDeq5CqbsPEMyFvH79TufB"
+				"bzz-raw://ec00bca9dd5205360d12d1b33ec1d7b8a9c545e95f4ce27bd686abfed37f7368",
+				"dweb:/ipfs/QmNbExFHC4QvHv88TG4kRr7zpZutmBEVkK19xV6Tf9r82L"
 			]
 		}
 	},
