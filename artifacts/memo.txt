@@ -1,0 +1,10 @@
+로컬 - 리믹스 연결
+$ remixd -s .
+
+리액트 앱 생성
+npx create-react-app 앱이름(대문자X)
+
+
+
+
+
