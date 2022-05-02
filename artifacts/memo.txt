@@ -32,4 +32,34 @@
 - 테스트용 주소와 프라이빗 키를 발현시키기 위해 hardhat node를 사용
     $ npx hardhat node
 
+- hardhat으로 스마트컨트랙트를 로컬호스트 네트워크에 배포(마치 remix처럼).
+    1. npx hardhat node로 노드 실행.
+    2. 배포 명령어 입력
+    $ npx hardhat run --network localhost scripts/deploy.js
+    (npx hardhat run --network <your-network> scripts/deploy.js)
 
+    결과 : 
+    - 배포 실행 창
+        Ballot deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3 
+    - 노드 실행 창
+        web3_clientVersion (2)
+        eth_chainId
+        eth_accounts
+        eth_blockNumber
+        eth_chainId (2)
+        eth_estimateGas
+        eth_getBlockByNumber
+        eth_feeHistory
+        eth_sendTransaction
+            Contract deployment: Ballot
+            Contract address:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+            Transaction:         0x8e9416cde547ec364eb30d7edaf703f8184083454bb6ca6a207c564b18919ad0
+            From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+            Value:               0 ETH
+            Gas used:            1285958 of 1285958
+            Block #1:            0x0a9fc6178862a209327015f90c4b4252d7bdee4e57a66d8e15979aaba31c5c5e
+
+        eth_chainId
+        eth_getTransactionByHash
+        eth_chainId
+        eth_getTransactionReceipt
